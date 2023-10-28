@@ -1,0 +1,35 @@
+{
+	"maintenantX":17050101,
+	"maintenant":0,
+	"build":"2311",
+
+	"configClass":"fr.alterconsos.AppConfig",
+	"providerClass":"fr.hypertable.AppDS",
+
+	"maxConnections":100,
+	"dbURL":"",
+	"username":"",
+	"providerHasCache":true,
+	"providerWorkers":2,
+
+	"url":"http://localhost:8080/alterconsosAE",
+	"urlX":"http://alterconsosae.ew.r.appspot.com",
+	"url4mail":"http://alterconsos.fr",
+
+	"contacts": [
+	],
+
+	"maildelai": 5,
+	"mailserverS":"simu",
+	"mailserverJ":"javamail",
+	"mailserver":"http://alterconsos.fr/tech/server3.php",
+  	"mdps":{"A":"999", "B":"999"},
+  	"smtp":true,
+
+	"adminSender" : "appli.dev@alterconsos.fr",
+	"adminMails" : "appli.dev@alterconsos.fr",
+
+	"emailfilterX" : "sportes.fr",
+	"emailfilter" : ""
+
+}
