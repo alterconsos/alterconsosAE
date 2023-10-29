@@ -39,21 +39,36 @@ public class StorePhoto extends Operation {
 			oldImageData = Base64.getDecoder().decode(content.substring(prefix.length()));
 			// oldImageData = Base64.decodeToBytes(content.substring(prefix.length()));
 			BufferedImage originalImage = ImageIO.read(new ByteArrayInputStream(oldImageData));
-			BufferedImage resizedImage = new BufferedImage(targetWidth, targetHeight, BufferedImage.TYPE_INT_RGB);
-			Graphics2D graphics2D = resizedImage.createGraphics();
-			graphics2D.drawImage(originalImage, 0, 0, targetWidth, targetHeight, null);
-			graphics2D.dispose();
+			int desiredSize = 256;
+			BufferedImage resizedImage = new BufferedImage(desiredSize, desiredSize, BufferedImage.TYPE_INT_RGB);
+
+			Graphics2D g = resizedImage.createGraphics();
+			g.setPaint(Color.WHITE);
+			g.fillRect(0, 0, desiredSize, desiredSize);
+
+			int tempWidth;
+			int tempHeight;
+			int y = 0;
+			int x = 0;
+
+			if (originalImage.getHeight() < originalImage.getWidth()) {
+				tempWidth = desiredSize;
+				tempHeight = (int)(((double)originalImage.getHeight()*desiredSize)/originalImage.getWidth());
+				y = -(tempHeight - tempWidth)/2;
+			}
+			else {
+				tempHeight = desiredSize;
+				tempWidth = (int)(((double)originalImage.getWidth()*desiredSize)/originalImage.getHeight());
+				x = -(tempWidth - tempHeight)/2;
+			}
+
+			g.drawImage(originalImage.getScaledInstance(tempWidth, tempHeight, Image.SCALE_SMOOTH), x, y, null);
+
+			g.dispose();
+
 			ByteArrayOutputStream baos = new ByteArrayOutputStream();
 			ImageIO.write(resizedImage, type, baos);
 			newImageData = baos.toByteArray();
-			/*
-			ImagesService imagesService = ImagesServiceFactory.getImagesService();
-			Image oldImage = ImagesServiceFactory.makeImage(oldImageData);
-			Transform resize = ImagesServiceFactory.makeResize(256, 256, (double) (0.5),
-					(double) (0.5));
-			Image newImage = imagesService.applyTransform(resize, oldImage);
-			newImageData = newImage.getImageData();
-			 */
 		} catch (Exception e) {
 			throw new AppException(e, MF.PHOTO, mime);
 		}

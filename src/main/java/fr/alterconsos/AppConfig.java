@@ -239,8 +239,8 @@ public class AppConfig implements IAppConfig {
 
 	public boolean isAdmin(String key){
 		if (key == null || key.length() == 0) return false;
-		return AS.toSHA1(key).equals(adminKey);
-		// return key.equals(adminKey);
+		// return AS.toSHA1(key).equals(adminKey);
+		return key.equals(adminKey);
 	}
 
 	public String myUrl() {
@@ -408,7 +408,8 @@ public class AppConfig implements IAppConfig {
 			mapsgoogle_apis = keys.getProperty("mapsgoogle.apis");
 			mail_password = keys.getProperty("mail.password");
 			password = keys.getProperty("pg.password");
-			adminKey = keys.getProperty("admin.key");
+			String pwd = keys.getProperty("admin.key");
+			adminKey = AS.toSHA1(pwd + "00");
 
 			maintenant = arg.getI("maintenant", 0);
 			if (maintenant != 0) try {

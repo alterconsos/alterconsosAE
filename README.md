@@ -98,6 +98,8 @@ Quand la base est chargée, ouvrir l'application par `localhost:8080/`.
 # Debug
 Dans `pom.xml` il faut compléter la `<configuration>` du plugin `appengine-maven-plugin` :
 
+Si on veut un point d'arrêt dès le débug, par exemple dans le chargement de la config dans AppConfig, il mettre `suspend=y` dans `appengine-maven-plugin / jvmFlags`.
+
         <plugin>
             ...
             <artifactId>appengine-maven-plugin</artifactId>
@@ -111,9 +113,9 @@ Dans `pom.xml` il faut compléter la `<configuration>` du plugin `appengine-mave
         </plugin>
 
 Commandes:
-- il faut D'ABORD :
-	- recompiler: dans un terminal: `mvn compile`
-	- puis lancer l'exécution. Par exemple dans un terminal: `mvn appengine:run`
+- il faut :
+- recompiler (ce n'est pas sûr, `appengine:run` a l'air de recompiler): dans un terminal: `mvn compile`
+- puis lancer l'exécution. Par exemple dans un terminal: `mvn appengine:run`
 - puis dans IntelliJ: `Menu >> Run >> Debug alterconsos`
 
 # Déploiement
