@@ -584,7 +584,7 @@ public class AppConfig implements IAppConfig {
 					sb.append(URLEncoder.encode(tox, StandardCharsets.UTF_8));
 					sb.append("&subject=");
 					sb.append(URLEncoder.encode((emailfilter.length != 0 ? "[TEST ENVOI MAILS] - " : "")
-							+ subject, StandardCharsets.UTF_8));
+							+ "/" + build + "/ -" + subject, StandardCharsets.UTF_8));
 					sb.append("&mdp=");
 					sb.append(URLEncoder.encode(mdp, StandardCharsets.UTF_8));
 					if (SMTP)

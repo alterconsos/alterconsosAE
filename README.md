@@ -169,7 +169,7 @@ Ces fichiers peuvent avoir à être changés entre les phases de test et le dép
 			"adminSender" : "appli.dev@alterconsos.fr",
 			"adminMails" : "appli.dev@alterconsos.fr",
 		
-			"emailfilterX" : "toto.fr",
+			"emailfilterX" : "toto.fr alfred@gmail.com",
 			"emailfilter" : ""
 		
 		}
@@ -223,10 +223,10 @@ mailserverS": ...
 "adminMails" : "appli.dev@alterconsos.fr",
 - quelques exceptions / reports sont envoyés pour information sur cette adresse.
 
-"emailfilter" : "toto.fr",
+"emailfilter" : "toto.fr alfred@gmail.com",
 - à un certain moment en test il faut bien envoyer de _vrais_ mails par le _vrai_ protocole.
-- pour éviter d'arroser tout le monde, seuls les mails dont l'adresse se termine par "toto.fr" seront effectivement envoyés.
-- Y mettre, en test seulement, l'adresse de l'alterconsos cobaye de son choix. 
+- pour éviter d'arroser tout le monde, seuls les mails dont l'adresse **se termine par** l'un des mots listés seront effectivement envoyés.
+- Y mettre, en test seulement, les adresses des alterconsos **cobaye** de son choix, séparées par UN ESPACE. 
 
 ### keys.properties
 mail.password
