@@ -154,7 +154,7 @@
         <artifactId>appengine-maven-plugin</artifactId>
         <version>2.5.0</version>
         <configuration>
-          <projectId>secrets2-sportes-fr</projectId>
+          <projectId>${artifactId}</projectId>
           <version>3-1</version>
           <deploy.promote>true</deploy.promote>
           <deploy.stopPreviousVersion>true</deploy.stopPreviousVersion>
