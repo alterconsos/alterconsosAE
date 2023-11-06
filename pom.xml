@@ -9,9 +9,10 @@
   <url>http://alterconsos.fr</url>
 
   <repositories>
-    <repository> <!-- Un seul repository local -->
-      <id>Local repository</id>
-      <url>file://${basedir}\lib</url>
+    <repository>
+      <id>project.local</id>
+      <name>project</name>
+      <url>file:${project.basedir}\lib</url>
     </repository>
   </repositories>
 
@@ -154,7 +155,7 @@
         <artifactId>appengine-maven-plugin</artifactId>
         <version>2.5.0</version>
         <configuration>
-          <projectId>${artifactId}</projectId>
+          <projectId>${project.artifactId}</projectId>
           <version>3-1</version>
           <deploy.promote>true</deploy.promote>
           <deploy.stopPreviousVersion>true</deploy.stopPreviousVersion>

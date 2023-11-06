@@ -34,8 +34,9 @@ Puis dans pom.xml:
 
             <repositories>
               <repository> <!-- Un seul repository local -->
-                <id>Local repository</id>
-                <url>file://${basedir}/lib</url>
+                <id>project.local</id>
+                <name>project</name>
+                <url>file:${project.basedir}/lib</url>
               </repository>
             </repositories>
           
@@ -52,7 +53,7 @@ En cas de problème de cache sur le local repository exécuter dans un terminal:
 		mvn dependency:purge-local-repository
 
 # Build
-Créer une configuaration de run: `Menu >> Run >> Edit configurations`
+Créer une configuration de run: `Menu >> Run >> Edit configurations`
 - Maven :
 	- Name: "Compile"
 	- Run: "compile war:war"
@@ -118,6 +119,12 @@ Commandes:
 - puis lancer l'exécution. Par exemple dans un terminal: `mvn appengine:run`
 - puis dans IntelliJ: `Menu >> Run >> Debug alterconsos`
 
+# Chargement des données par acDL
+Le path d'installation de `nwjs` étant dans la variable `NW` :
+- se mettre dans le directory courant de `acDL`;
+- lancer (sous Windows): `%NW%\nw .`
+- **Attention**: le host local de test n'est pas toujours http://localhost:8080 mais peut être http://127.0.0.1:8080
+
 # Déploiement
 
         gcloud app deploy target/alterconsosae-1.0/WEB-INF/appengine-web.xml
@@ -126,7 +133,7 @@ Commandes:
 
 # URL du site
 
-        https://alterconsosae.ew.r.appspot.com/
+        https://alterconsosae.ew.r.appspot.com/ (à confirmer)
 
         Pour admin:
         https://alterconsosae.ew.r.appspot.com/admin.html
@@ -135,6 +142,7 @@ Commandes:
 Ces fichiers peuvent avoir à être changés entre les phases de test et le déploiement.
 - `src/main/webapp/WEB-INF/ac.json` : fichier principal en notation JSON. Il figure dans git.
 - `src/main/webapp/WEB-INF/keys.properties` : fichier contenant les données de sécurité qui ne doivent pas figurer dans git.
+- **ne pas oublier de recompiler après les avoir modifier** afin qu'ils se retrouvent bien dans `target`.
 
 ### ac.json
 
@@ -157,6 +165,7 @@ Ces fichiers peuvent avoir à être changés entre les phases de test et le dép
 			"url4mail":"http://alterconsos.fr",
 		
 			"contacts": [
+		        "Uniquement pour les questions purement techniques, </i> : <a href='mailto:appli.dev@alterconsos.fr'>Équipe des développeurs</a>"
 			],
 		
 			"maildelai": 5,
@@ -199,7 +208,7 @@ Quand une lettre suit le nom de l'entrée (par exemple `mailserverS` pour l'entr
 - celle citée ici est en réalité une adresse de redirection vers l'adresse réelle de déploiement qui est généralement désagréablie à lire et surtout à retenir.
 
 "contacts": [],
-- liste des adresses de contacts mises en bas des mails hebdomadaires.
+- liste des lignes HTML qui seront insérées dans chaque synthèse hebdomadaires (typiquement les adresses de contacts.
 - laisser une liste vide évite d'être dérangé (assez fréquemment) par des alterconsos qui ne vont pas chercher l'adresse de leur animateur.
 
 "maildelai": 5,
