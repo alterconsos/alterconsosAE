@@ -12,7 +12,7 @@
 	"providerHasCache":true,
 	"providerWorkers":2,
 
-	"url":"http://localhost:8080/alterconsosAE",
+	"url":"https://adoussot-project-02.ew.r.appspot.com",
 	"urlX":"http://alterconsosae.ew.r.appspot.com",
 	"url4mail":"http://alterconsos.fr",
 
