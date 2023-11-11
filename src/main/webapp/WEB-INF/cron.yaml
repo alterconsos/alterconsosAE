@@ -1,0 +1,13 @@
+cron:
+- url: '/cron/Hebdos2/1'
+  schedule: 'every day 05:00'
+  timezone: 'Europe/Paris'
+  description: 'Envoi des mails hebdomadaires'
+- url: '/cron/TaskArchive/0'
+  schedule: 'every monday 04:00'
+  timezone: 'Europe/Paris'
+  description: 'Archivage des livraisons'
+- url: '/cron/TaskPurge/0'
+  schedule: 'first day of sep 01:00'
+  timezone: 'Europe/Paris'
+  description: 'Purges des contacts, produits, livraisons'
