@@ -2,7 +2,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>fr.alterconsos</groupId>
-  <artifactId>adoussot-project-02</artifactId>
+  <artifactId>alterconsos</artifactId>
   <packaging>war</packaging>
   <version>1.0</version>
   <name>Application alterconsoss 2024</name>
@@ -155,7 +155,7 @@
         <artifactId>appengine-maven-plugin</artifactId>
         <version>2.5.0</version>
         <configuration>
-          <projectId>${project.artifactId}</projectId>
+          <projectId>adoussot-project-02</projectId>
           <version>3-1</version>
           <deploy.promote>true</deploy.promote>
           <deploy.stopPreviousVersion>true</deploy.stopPreviousVersion>
