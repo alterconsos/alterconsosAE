@@ -135,9 +135,21 @@ Le path d'installation de `nwjs` étant dans la variable `NW` :
 
 ## Déploiement
 
-	gcloud app deploy target/alterconsosae-1.0/WEB-INF/appengine-web.xml
-	OU
-	mvn appengine:deploy
+Déployer l'application
+```bash
+gcloud app deploy target/alterconsosae-1.0/WEB-INF/appengine-web.xml
+# OU
+mvn appengine:deploy
+```
+
+Ajouter "alterconsos.fr@gmail.com" dans App Engine > Settings > Emailsender
+
+Activer le service cloudscheduler dans le compte google via <https://console.cloud.google.com/apis/library/cloudscheduler.googleapis.com>
+
+Déployer le cron.yaml en charge de l'envoi des mail
+```bash
+gcloud app deploy src\main\webapp\WEB-INF\cron.yaml
+```
 
 ## URL du site
 
