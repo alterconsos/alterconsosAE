@@ -260,6 +260,8 @@ public class AppDS implements IProvider {
 			ds().put(admin);
 			commit(true);
 			HTServlet.onoff = on;
+			String msg = "OK - Serveur " + (on ? "ON" : "OFF");
+			log.log(Level.WARNING, msg);
 			return "OK - Serveur " + (on ? "ON" : "OFF");
 		} catch (Exception e) {
 			try {
