@@ -185,7 +185,7 @@ Ces fichiers peuvent avoir à être changés entre les phases de test et le dép
 	"url4mail":"http://alterconsos.fr",
 
 	"contacts": [
-		"Uniquement pour les questions purement techniques, </i> : <a href='mailto:appli.dev@alterconsos.fr'>Équipe des développeurs</a>"
+		"Uniquement pour les questions purement techniques, </i> : <a href='mailto:alterconsos.fr@gmail.com'>Équipe des développeurs</a>"
 	],
 
 	"maildelai": 5,
@@ -195,8 +195,8 @@ Ces fichiers peuvent avoir à être changés entre les phases de test et le dép
 	"mdps":{"A":"999", "B":"999"},
 	"smtp":true,
 
-	"adminSender" : "appli.dev@alterconsos.fr",
-	"adminMails" : "appli.dev@alterconsos.fr",
+	"adminSender" : "alterconsos.fr@gmail.com",
+	"adminMails" : "alterconsos.fr@gmail.com",
 
 	"emailfilterX" : "toto.fr alfred@gmail.com",
 	"emailfilter" : ""
@@ -246,10 +246,10 @@ mailserverS": ...
 - liste des environnements connus dans `server3.php`
 - "999" ne sert à rien: le mot de passe effectivement employé par l'application et transmis à `server3.php` est déclaré dans `keys.properties`.
 
-"adminSender" : "appli.dev@alterconsos.fr",
+"adminSender" : "alterconsos.fr@gmail.com",
 - adresse mail de l'envoyeur des mails hebdomadaires. Cette adresse n'est jamais lue et les alterconsos qui y posent des questions ou y répondent sont toujours déçus.
 
-"adminMails" : "appli.dev@alterconsos.fr",
+"adminMails" : "alterconsos.fr@gmail.com",
 - quelques exceptions / reports sont envoyés pour information sur cette adresse.
 
 "emailfilter" : "toto.fr alfred@gmail.com",

@@ -17,7 +17,7 @@
 	"url4mail":"http://alterconsos.fr",
 
 	"contacts": [
-		"Uniquement pour les questions purement techniques, </i> : <a href='mailto:appli.dev@alterconsos.fr'>Équipe des développeurs</a>"
+		"Uniquement pour les questions purement techniques, </i> : <a href='mailto:alterconsos.fr@gmail.com'>Équipe des développeurs</a>"
 	],
 
 	"maildelai": 5,
@@ -27,8 +27,8 @@
   	"mdps":{"A":"999", "B":"999"},
   	"smtp":true,
 
-	"adminSender" : "appli.dev@alterconsos.fr",
-	"adminMails" : "appli.dev@alterconsos.fr",
+	"adminSender" : "alterconsos.fr@gmail.com",
+	"adminMails" : "alterconsos.fr@gmail.com",
 
 	"emailfilterX" : "toto.fr alfred@gmail.com",
 	"emailfilter" : "sportes.fr"
