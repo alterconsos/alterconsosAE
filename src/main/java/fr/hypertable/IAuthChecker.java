@@ -5,7 +5,7 @@ import fr.alterconsos.cell.Directory;
 public interface IAuthChecker {
 
 	/**
-	 * L'objectif est FIXER le niveau d'authentification atteient, ET NON de
+	 * L'objectif est FIXER le niveau d'authentification atteint, ET NON de
 	 * s'assurer qu'il convient (c'est le rôle des opérations).<br>
 	 * Le retour false indique une tentative de prétendre à un niveau
 	 * d'authentification alors que la session cliente ne l'a pas. AuthId va

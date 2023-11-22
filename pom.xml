@@ -155,7 +155,7 @@
         <artifactId>appengine-maven-plugin</artifactId>
         <version>2.5.0</version>
         <configuration>
-          <projectId>adoussot-project-02</projectId>
+          <projectId>alterconsos2</projectId>
           <version>3-1</version>
           <deploy.promote>true</deploy.promote>
           <deploy.stopPreviousVersion>true</deploy.stopPreviousVersion>
