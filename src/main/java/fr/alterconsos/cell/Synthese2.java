@@ -197,7 +197,7 @@ public class Synthese2 {
 	private static final String h90 = "<div style='font-size:11px;font-weight:bold;border-top:1px solid grey;margin-top:16px'>Contacter des animateurs</div>\n" +
 			"<ul style='font-size:11px;'>\n" ;
 	private static final String h91 = "</ul><div style='font-size:10px;margin:5px 0'><a target='_blank' href='";
-	public static final String h92 = "/appli.html' target='_blank'>Accès général à l'application (tous rôles)</a><br>\n<a target='_blank' href='";
+	public static final String h92 = "/appli2.html' target='_blank'>Accès général à l'application (tous rôles)</a><br>\n<a target='_blank' href='";
 	private static final String h93 = "'>Ne plus recevoir cette synthèse hebdomadaire</a></div></div></body></html>";
 
 	private void entete(StringBuffer sb) {
@@ -219,7 +219,7 @@ public class Synthese2 {
 			sb.append("</div>\n");
 		}
 		String u = HTServlet.appCfg.url4mail();
-		sb.append(h3).append(u + "/appli.html?").append(usrLoginMP).append(!unclicC ? "" : ".c0" + usrC.ci1()).append(h4);
+		sb.append(h3).append(u + "/appli2.html?").append(usrLoginMP).append(!unclicC ? "" : ".c0" + usrC.ci1()).append(h4);
 		sb.append(usr == 0 ? libs[mode] : "").append(usrLabel).append(" [").append(usrInit).append("]").append(h5);
 	}
 		
